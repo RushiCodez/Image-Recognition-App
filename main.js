@@ -1,4 +1,4 @@
-webcam.set({
+Webcam.set({
 width: 350px;
 height:300px;
 image_format:'png',
@@ -7,10 +7,10 @@ png_quality:90;
 });
 
 camera= document.getElementById("camera");
-webcam.attatch('#camera');
+Webcam.attatch('#camera');
 
 function take_snapshot(){
-webcam.snap(function(data_uri){  
+Webcam.snap(function(data_uri){  
 document.getElementById("result").innerHTML = '<img id= "captured_image" src= "'+ data_uri +'"/>';
 
 });
@@ -29,7 +29,7 @@ classifier.classify(img, gotResult);
 }
 
 function gotResult(error,results){
-if error{
+if (error){
 console.error(error)
 
 }
